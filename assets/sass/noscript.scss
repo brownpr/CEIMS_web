@@ -3,17 +3,43 @@
 @import 'libs/mixins';
 @import 'libs/vendor';
 @import 'libs/breakpoints';
+<<<<<<< HEAD
 
 /*
 	Big Picture by HTML5 UP
+=======
+@import 'libs/html-grid';
+
+/*
+	Landed by HTML5 UP
+>>>>>>> 36be43c (webpage change)
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 /* Loader */
 
+<<<<<<< HEAD
 	body {
 		&:before, &:after {
 			display: none;
+=======
+	body.landing {
+
+		&.is-preload {
+
+			// Spinner (active)
+
+				&:before {
+					display: none;
+				}
+
+			// Overlay (active)
+
+				&:after {
+					display: none;
+				}
+
+>>>>>>> 36be43c (webpage change)
 		}
 	}

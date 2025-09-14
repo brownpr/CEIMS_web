@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 Big Picture by HTML5 UP
+=======
+Landed by HTML5 UP
+>>>>>>> 36be43c (webpage change)
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
 
+<<<<<<< HEAD
 This is Big Picture, a simple, single page responsive site template by HTML5 UP.
 
 So I've been on a single page kick as of late, partly because I'm lazy, but
@@ -21,10 +26,26 @@ photos in Big Picture's demo*.
 (* = Not included! Only meant for use with my own on-site demo, so please do NOT
 download and/or use any of Felicia's or Michael's work without their explicit
 permission!)
+=======
+A dark, slick, modern, responsive, adjective-drenched design built around an extremely
+dynamic landing page (scroll that mofo!). Inspired by Big Picture, another design
+of mine with a similarish feel/flow, only this time I took it waaaaaay further and
+actually made it multipurpose (versus copping out and making it a one pager like I
+did last time ;) Includes multiple pages, a bunch of pre-styled elements, and all
+its Sass sources.
+
+Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
+you can use for pretty much whatever.
+
+(* = Not included)
+
+Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
+>>>>>>> 36be43c (webpage change)
 
 AJ
 aj@lkn.io | @ajlkn
 
+<<<<<<< HEAD
 PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
 
 
@@ -128,10 +149,13 @@ Instructions:
 		- If you don't like the way images are tinted, either change "images/overlay.png"
 		  to something else, or remove all references to it from css/style.css.
 
+=======
+>>>>>>> 36be43c (webpage change)
 
 Credits:
 
 	Demo Images:
+<<<<<<< HEAD
 		Felicia Simion (ineedchemicalx.deviantart.com)
 			"The Swallow Song"
 			"Mind is a clear stage"
@@ -144,12 +168,18 @@ Credits:
 			"Airchitecture II"
 			"Bent IX"
 			"Air Lounge"
+=======
+		Unsplash (unsplash.com)
+>>>>>>> 36be43c (webpage change)
 
 	Icons:
 		Font Awesome (fontawesome.io)
 
 	Other:
 		jQuery (jquery.com)
+<<<<<<< HEAD
 		Poptrox (github.com/ajlkn/jquery.poptrox)
+=======
+>>>>>>> 36be43c (webpage change)
 		Scrollex (github.com/ajlkn/jquery.scrollex)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
