@@ -172,10 +172,15 @@
 
 				<!-- 5: Podcast -->
 				<section id="two" class="spotlight style2 right">
-					<video autoplay loop muted playsinline class="fit main">
-						<source src="images/PaginaPrincipal/5_video.mp4" type="video/mp4">
-						Your browser does not support the video tag.
+					<video autoplay loop muted playsinline preload="metadata" poster="images/social_media/podcast.jpg" >
+					<source src="images/PaginaPrincipal/5_video.mp4" type="video/mp4">
+					Tu navegador no soporta video HTML5.
 					</video>
+
+					<!-- Mobile fallback image (.image.main is shown on small screens by template) -->
+					<span class="image main">
+					<img src="images/social_media/podcast." alt="Podcast" />
+					</span>
 					<div class="content">
 						<header>
 							<h2>Podcast</h2>
