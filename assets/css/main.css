@@ -3452,7 +3452,7 @@ input, select, textarea {
 	#banner {
 		background-attachment: fixed;
 		background-color: #272833;
-		background-image: url("../../images/CEIMS/background.jpg");
+		background-image: url("../../images/CEIMS/background4.jpg");
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -4230,4 +4230,45 @@ input, select, textarea {
   text-shadow:
     -0.06em -0.06em 0 #ff48cf,
      0.06em  0.06em 0 #45d4ff;
+}
+
+.white-outline {
+  color: #fff;
+  text-shadow:
+    /* 1px outline in 8 directions */
+    0 1px 0 rgba(0,0,0,.55),
+    1px 0 0 rgba(0,0,0,.55),
+    0 -1px 0 rgba(0,0,0,.55),
+    -1px 0 0 rgba(0,0,0,.55),
+    1px 1px 0 rgba(0,0,0,.55),
+    1px -1px 0 rgba(0,0,0,.55),
+    -1px 1px 0 rgba(0,0,0,.55),
+    -1px -1px 0 rgba(0,0,0,.55);
+}
+
+.white-halo {
+  color: #fff;
+  text-shadow:
+    0 0 6px rgba(0,0,0,.35),
+    0 2px 3px rgba(0,0,0,.25);
+}
+
+.white-pill {
+  color: #fff;
+  background: rgba(0,0,0,.35);
+  padding: .15em .4em;
+  border-radius: .25em;
+}
+
+.white-backdrop {
+  position: relative;
+  color: #fff;
+}
+.white-backdrop::before {
+  content: "";
+  position: absolute;
+  inset: -.15em;
+  backdrop-filter: blur(3px) brightness(0.7);
+  border-radius: .25em;
+  z-index: -1;
 }
