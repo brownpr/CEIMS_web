@@ -1,42 +1,35 @@
 (() => {
-  const modal = document.getElementById('imgModal');
-  const openLink = document.getElementById('openImage');
-  const closeBtn = document.getElementById('closeModal');
-  const body = document.querySelector('.modal__body');
+  const triggers = document.querySelectorAll('.popup-link');
 
-  if (!modal || !openLink || !closeBtn || !body) return;
+  triggers.forEach(trigger => {
+    const modalId = trigger.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    const closeBtn = modal.querySelector('.modal__close');
 
-  const openModal = (e) => {
-    if (e) e.preventDefault();
-    modal.classList.add('is-visible');
-    modal.setAttribute('aria-hidden', 'false');
-  };
-
-  const closeModal = () => {
-    modal.classList.remove('is-visible');
-    modal.setAttribute('aria-hidden', 'true');
-  };
-
-  // Open on click or Enter/Space (for accessibility)
-  openLink.addEventListener('click', openModal);
-  openLink.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
+    const openModal = (e) => {
       e.preventDefault();
-      openModal();
-    }
-  });
+      modal.classList.add('is-visible');
+      modal.setAttribute('aria-hidden', 'false');
+    };
 
-  // Close actions
-  closeBtn.addEventListener('click', closeModal);
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
-  });
+    const closeModal = () => {
+      modal.classList.remove('is-visible');
+      modal.setAttribute('aria-hidden', 'true');
+    };
 
-  // Click outside the image (background or the box, not the image) to close
-  modal.addEventListener('click', (e) => {
-    const clickedInsideImage = e.target.tagName === 'IMG';
-    if (!clickedInsideImage && (e.target === modal || e.target === body)) {
-      closeModal();
-    }
+    trigger.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close when clicking dark background
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Close with Esc
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('is-visible')) {
+        closeModal();
+      }
+    });
   });
 })();
