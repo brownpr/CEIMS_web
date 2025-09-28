@@ -4171,3 +4171,34 @@ input, select, textarea {
   display: block;
   border-radius: 4px;
 }
+
+/* Make the <video> fill the spotlight as a background layer */
+.spotlight > video {
+  position: absolute;
+  inset: 0;               /* top/right/bottom/left: 0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* fill + crop nicely */
+  z-index: 0;             /* behind overlay & content */
+  pointer-events: none;   /* don't block links/buttons */
+  background: #000;       /* fallback while loading */
+}
+
+/* Ensure the existing overlay image sits above the video */
+.spotlight:before {
+  z-index: 1;
+  position: absolute;     /* ensure it layers */
+  left: 0; top: 0; right: 0; bottom: 0;
+}
+
+/* Content panel and "Next" arrow on top of overlay */
+.spotlight .content,
+.spotlight .goto-next {
+  z-index: 2;
+  position: relative;     /* create stacking context */
+}
+
+/* Mobile bandwidth saver: hide video on tablets/phones */
+@media screen and (max-width: 980px) {
+  .spotlight > video { display: none; }
+}
